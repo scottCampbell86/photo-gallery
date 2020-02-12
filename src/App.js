@@ -17,6 +17,8 @@ export default class App extends Component {
       const handleChange = e => {
         this.setState({ selected: e.target.value });
     };
+    console.log(this.state.selected);
+    const select = this.state.selected;
       return (
         <>
         <Header />
@@ -50,7 +52,7 @@ export default class App extends Component {
           </section>
 
           <section>
-              <ImageList imagesArray={images}/>
+              <ImageList imagesArray={images} select={select}/>
           </section>
         </main>
 
