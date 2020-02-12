@@ -1,19 +1,17 @@
-import React, { Component } from 'react'
-
-export default class images extends Component {
-    render() {
-        return <li>
-            <div className="image-container">
-                <h2>{this.props.feline.name}</h2>
-                <p className="cat-type">{this.props.feline.type}</p>
-            </div>
-
-            <div className="image-container">
-                <img
-                    alt={this.props.feline.url}
-                    src={this.props.feline.url} />
-            </div>
-            <p className="year">{this.props.feline.year}</p>
-        </li>
-    }
+import React, { Component } from 'react';
+import ImageItem from './ImageItem.js';
+export default class ImageList extends Component {
+  render() {
+    return (
+          <ul>
+          {this.props.imagesArray.filter(image => {
+          if (!this.props.selected) return true;
+          return image.keyword === this.props.selected;
+        })
+          .map(image => <ImageItem image={image} />
+            
+          )       
+        }
+        </ul>)   
+  }
 }
