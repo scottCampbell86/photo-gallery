@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import images from './data.js';
 
 
 export default class ImageItem extends Component {

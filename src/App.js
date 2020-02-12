@@ -8,23 +8,19 @@ export default class App extends Component {
   state = { selected: null };
 
     render() {
-      // need data
-        // filter, and if true, make a return of obj.x and this.state.objSelected
-
-      //do some kind of mapping that then renders obj in/as class?
-
-       
-      const handleChange = e => {
+    const selected = this.state.selected;     
+    const handleChange = e => {
         this.setState({ selected: e.target.value });
     };
-    console.log(this.state.selected);
-    const select = this.state.selected;
-      return (
-        <>
+    const filteredArray = images.filter(image => {
+      if (!selected) return true;
+      return image.keyword === selected;
+    })
+   
+    return (
+      <>
         <Header />
-       
         <main>
-
           <section className="options">
             <select className="beast-type-filter" onChange={handleChange}>
               <option value="" defaultValue>
@@ -52,11 +48,10 @@ export default class App extends Component {
           </section>
 
           <section>
-              <ImageList imagesArray={images} select={select}/>
+              <ImageList imagesArray={filteredArray} />
           </section>
         </main>
-
-        </>
+      </>       
       );
-    }
-  }
+    };
+  };
