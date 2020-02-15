@@ -1,10 +1,11 @@
 import React from 'react';
-import Header from './Header.js';
+import ImageItem from './ImageItem.js';
 import renderer from 'react-test-renderer';
+
 
 it('renders correctly', () => {
   const tree = renderer
-    .create(<Header />)
+    .create(<ImageItem image={[]} />)
     .toJSON();
   expect(tree).toMatchSnapshot();
 });

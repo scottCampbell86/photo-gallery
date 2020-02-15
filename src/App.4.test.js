@@ -1,10 +1,12 @@
 import React from 'react';
-import Header from './Header.js';
+import ImageList from './ImageList.js';
 import renderer from 'react-test-renderer';
+
+
 
 it('renders correctly', () => {
   const tree = renderer
-    .create(<Header />)
+    .create(<ImageList imagesArray = {[]} />)
     .toJSON();
   expect(tree).toMatchSnapshot();
 });

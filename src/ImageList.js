@@ -5,9 +5,12 @@ export default class ImageList extends Component {
     return (
         <ul> 
         {
-          this.props.imagesArray.map(image => <ImageItem image={image} />)  
+          this.props.imagesArray.map(image => <ImageItem key={image.title} image={image} />)
+           
+         
 
         }
+        {console.log(this.props.imagesArray)}
         </ul>)   
   }
 }
