@@ -6,7 +6,7 @@ export default class Header extends Component {
       <>
         <header className="App-header">
           <img src="" alt=""/>
-          <h1>Horned Beasts</h1>
+          <h1>Monster Cards</h1>
         </header>  
       </>
     );
