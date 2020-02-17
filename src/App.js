@@ -22,7 +22,7 @@ export default class App extends Component {
    
     return (
       <>
-        <Header />
+        <Header className="App-header"/>
         <main>
           <section className="options"> 
               <DropDown handleChangeCallback={handleChange}/>

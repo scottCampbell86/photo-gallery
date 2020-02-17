@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import App from './DropDown';
+import './App.css';
 
 
 export default class ImageItem extends Component {
